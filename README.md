@@ -3,7 +3,7 @@ Lawlster's Coaching is a coaching platform that provides coaching lessons for va
 
 **Lawlster is a famous tiktoker and achieved a ranking of Top #365 place in the entire South East Asia region. Which is why he is a trusted and worthy valorant player fit enough to be one of the best coaches in the world.**
 
-![This is the picture](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwecoach.gg%2Fvalorant-coaching&psig=AOvVaw3EpSBg0MnJlXbvrhLXTxBC&ust=1674319700519000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCMj22YnN1vwCFQAAAAAdAAAAABAd)
+![This is the picture](https://lh3.googleusercontent.com/GgY78YpVQrSXwcLvLTwEmc3gI11_6nRTg1ueUk2W_QbiO1C4D4Pyc3Zo_Jq_BzIWl-bJqmSyaZZzPp4cmLhdQmrY15wTFsk1-0WDFr1DatlsQjBy9jiBgGg=s1200)
 
 
 ### Design Process :rocket:

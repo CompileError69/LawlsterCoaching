@@ -18,10 +18,10 @@ We would like to create a website that is simple to navigate so that users will 
 
 **What kind of interactions i would like to have on my website**
 
-*A nav bar at the top to navigate through a single scroll page and select what they would want to view
-    *About us
-    *How it works
-    *Reviews
+* A nav bar at the top to navigate through a single scroll page and select what they would want to view
+    * About us
+    * How it works
+    * Reviews
 
 * I would put up useful information about the coach to make the users trust that the coaches we provide are reliable
 * I would put information on why they should hire a coach to guide them and improve significantly in their gameplay.

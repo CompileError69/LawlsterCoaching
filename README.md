@@ -29,6 +29,7 @@ We would like to create a website that is simple to navigate so that users will 
 ## Features :octocat:
 ### Existing features
 
+![This is the picture](https://media.karousell.com/media/photos/products/2022/5/25/valorant_coachingvalorant_team_1653483786_cde9f861_progressive)
 
 ## Technologies used :+1:
 [Adobe XD](https://www.adobe.com/sg/products/xd.html)

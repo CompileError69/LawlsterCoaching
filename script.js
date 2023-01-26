@@ -23,11 +23,5 @@ document.querySelector("#login-btn").onclick = () => {
     menu.classList.remove("active");
   };
   
-  document.querySelector("#book-btn").onclick = () => {
-    document.querySelector(".book-form-container").classList.toggle("active");
-  };
-  
-  document.querySelector("#close-book-form").onclick = () => {
-    document.querySelector(".book-form-container").classList.remove("active");
-  };
+
   

@@ -30,4 +30,3 @@ document.querySelector("#login-btn").onclick = () => {
   document.querySelector("#close-book-form").onclick = () => {
     document.querySelector(".book-form-container").classList.remove("active");
   };
-  

@@ -108,7 +108,7 @@ header.shadow{
 
 .navbar a{
     color: white;
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
     font-weight: 500;
 }
@@ -416,7 +416,7 @@ header.shadow{
 
 .about .row .video-container video{
     width:100%;
-    border:1.5rem solid #fff;
+    border:1.5rem solid var(--black);
     border-radius: .5rem;
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
     height: 100%;
@@ -425,11 +425,11 @@ header.shadow{
 
 .about .row .video-container h3{
     position: absolute;
-    top:50%; transform: translateY(100%);
-    font-size: 3rem;
+    top:50%; transform: translateY(200%);
+    font-size: 2rem;
     background:#fff;
     width:100%;
-    padding:1rem 2rem;
+    padding:0.4rem 0.8rem;
     text-align: center;
     mix-blend-mode: screen;
 }
@@ -439,12 +439,12 @@ header.shadow{
 }
 
 .about .row .content h3{
-    font-size: 3rem;
+    font-size: 2.5rem;
     color:#333;
 }
 
 .about .row .content p{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color:#999;
     padding:.5rem 0;
     padding-top: 1rem;
@@ -463,7 +463,7 @@ header.shadow{
 .icons-container .icons{
     background:#fff;
     border:.1rem solid rgba(0,0,0,.1);
-    padding:2rem;
+    padding: 1.3rem;
     display: flex;
     align-items: center;
     flex:1 1 25rem;
@@ -471,18 +471,19 @@ header.shadow{
 
 .icons-container .icons img{
     height:5rem;
+    width: 5rem;
     margin-right: 2rem;
 }
 
 .icons-container .icons h3{
     color:#333;
     padding-bottom: .5rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .icons-container .icons span{
     color:#555;
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 .btns{
@@ -491,11 +492,87 @@ header.shadow{
     border-radius: 5rem;
     background:#333;
     color:#fff;
-    padding:.9rem 3.5rem;
+    padding:.6rem 2.5rem;
     cursor: pointer;
-    font-size: 1.7rem;
+    font-size: 1.3rem;
 }
 
 .btns:hover{
     background:var(--pink);
 }
+
+
+@media (max-width: 1080px ) {
+    .container {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .nav {
+        padding: 15px 20px;
+    }
+    section{
+        padding: 3rem 0 1rem;
+    }
+    .home.text {
+        padding-left: 2rem;
+    }
+    .home.text h1{
+        font-size: 2.1rem;
+    }
+}
+
+@media (max-width: 968px){
+    .nav {
+        padding: 10px 0;
+    }
+    #menu-icon {
+        display: initial;
+    }
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        background: black;
+        row-gap: 0.5rem;
+        text-align: center;
+        box-shadow: 4px 4px 20px rgb(15 54 55 /20%);
+        clip-path: circle(0% at 0% 0%);
+        transition: 0.6s;
+    }
+    .navbar a {
+        display: block;
+        padding: 15px;
+    }
+    .navbar a:hover,
+    .navbar.active{
+        border-bottom: none;
+        background: black;
+        color: var(--bg-color);
+    }
+    .navbar.active{
+        clip-path: circle(144% at 0% 0%);
+    }
+    .blog-container .box {
+        padding: 4px;
+    }
+}
+
+@media (max-width: 360px) {
+    .home {
+        min-height: 500px;
+    }
+    .home-text h1{
+        font-size: 2rem;
+    }
+    .home-text p br{
+        display: contents;
+    }
+}
+
+

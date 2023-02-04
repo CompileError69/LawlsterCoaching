@@ -501,7 +501,57 @@ header.shadow{
     background:var(--pink);
 }
 
+.newsletter{
+    background:url(https://cdn1.epicgames.com/offer/cbd5b3d310a54b12bf3fe8c41994174f/VAL_2560x1440-a875b64f871200771ee9397df1d7050b) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
 
+.newsletter form{
+    max-width: 30rem;
+    margin-left: auto;
+    text-align: center;
+    padding:4rem 0;
+}
+
+.newsletter form h3{
+    font-size: 1.8rem;
+    color:#fff;
+    padding-bottom: .7rem;
+    font-weight: normal;
+}
+
+.newsletter form .box{
+    width: 100%;
+    margin: .7rem 0;
+    padding:1rem 0.8rem;
+    font-size: 1rem;
+    color:var(--black);
+    border-radius: .3rem;
+    text-transform: none;
+}
+
+
+@media (max-width:991px){
+    
+    html{
+        font-size: 55%;
+    }
+
+    header{
+        padding:2rem;
+    }
+
+    section{
+        padding:2rem;
+    }
+
+    .home{
+        background-position: left;
+    }
+
+}
 @media (max-width: 1080px ) {
     .container {
         margin-left: 1rem;
@@ -576,3 +626,14 @@ header.shadow{
 }
 
 
+@media (max-width:450px){
+    
+    html{
+        font-size: 50%;
+    }
+
+    .heading{
+        font-size: 3rem;
+    }
+
+}

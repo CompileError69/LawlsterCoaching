@@ -112,4 +112,49 @@ var swiper = new Swiper(".reviews-slider", {
         slidesPerView: 3,
       },
     },
-  });
+});
+
+/* Database */
+const APIKEY = "63dfe1ab3bc6b255ed0c46bf";
+
+// GET Data
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://lawlstercoachingdb-781d.restdb.io/rest/user-info",
+  "method": "GET",
+  "headers": {
+    "content-type": "application/json",
+    "x-apikey": APIKEY,
+    "cache-control": "no-cache"
+  }
+}
+
+let jsondata = {
+  "name": contactName,
+  "email": contactEmail,
+  "password": contactMessage
+};
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
+
+// POST Data
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://lawlstercoachingdb-781d.restdb.io/rest/user-info",
+  "method": "POST",
+  "headers": {
+    "content-type": "application/json",
+    "x-apikey": "<your CORS apikey here>",
+    "cache-control": "no-cache"
+  },
+  "processData": false,
+  "data": JSON.stringify(jsondata)
+}
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});

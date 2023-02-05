@@ -1,3 +1,4 @@
+
 /* Open login form */
 document.querySelector("#login-btn").onclick = () => {
     document.querySelector(".login-form-container").classList.toggle("active");
@@ -79,6 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+/* Loader */
 fadeOut();
 function loader(){
     document.querySelector('.loader-container').classList.add('active');
@@ -87,3 +89,27 @@ function loader(){
 function fadeOut(){
     setTimeout(loader,1000);
 }
+
+/* Reviews */
+
+var swiper = new Swiper(".reviews-slider", {
+    spaceBetween: 10,
+    grabCursor:true,
+    loop:true,
+    centeredSlides: true,
+    autoplay: {
+      delay: 9500,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });

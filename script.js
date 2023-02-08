@@ -158,3 +158,44 @@ var settings = {
 $.ajax(settings).done(function (response) {
   console.log(response);
 });
+
+
+function sendEmail(){
+  
+  Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : 'vernonkoh123@gmail.com',
+    Password : "F3067591595AB4C402CB0B5A3FF33C715A30",
+    To : 'lawlsters03@gmail.com',
+    From : document.getElementById("email").value,
+    Subject :  "New Contact Us Enquiry",
+    Body : "Name: " + document.getElementById("name").value
+        + "<br> Email: " + document.getElementById("email").value
+        + "<br> Subject: " + document.getElementById("subject").value
+        + "<br> Message: " + document.getElementById("message").value
+        
+}).then(
+  message => alert("Message Sent Succesfully")
+);
+}
+
+/*
+function sendEmail(){
+  
+  Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : 'vernonkoh123@gmail.com',
+    Password : "F3067591595AB4C402CB0B5A3FF33C715A30",
+    To : document.getElementById("email").value,
+    From : 'vernonkoh123@gmail.com',
+    Subject :  "New Contact Us Enquiry",
+    Body : "Name: " + document.getElementById("name").value
+        + "<br> Email: " + document.getElementById("email").value
+        + "<br> Message: Thank you for submitting your Enquiries we will get back to you soon"
+        
+}).then(
+  message => alert("Message Sent Succesfully")
+);
+}
+
+*/

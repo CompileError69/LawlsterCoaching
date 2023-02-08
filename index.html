@@ -75,7 +75,7 @@
                 <input type="password" id="signupConfirmPassword" class="form__input" autofocus placeholder="Confirm password">
                 <div class="form__input-error-message"></div>
             </div>
-            <button type="submit" id="signupSubmit" class="form__button">Continue</button>
+            <button type="submit" id="signupSubmit" class="form__button">Login</button>
             <p class="form__text">
                 <a class="form__link" href="./" id="linkLogin">Already have an account? Sign in</a>
             </p>
@@ -302,19 +302,18 @@
 
     <div class="row">
         <iframe class = "map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2820.5017802775665!2d103.85341123658675!3d1.2996884997029594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1936beecf457%3A0xf89eb80633e02ddc!2sReality%20Rift%20Arena%20Bugis%2B!5e0!3m2!1sen!2ssg!4v1675709139123!5m2!1sen!2ssg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <form action="">
+        <form onsubmit="sendEmail(); reset(); return false;">
             <h3>Message Us</h3>
-            <input type="text" placeholder="Enter Name" class="box">
-            <input type="email" placeholder="Enter Email" class="box">
-            <input type="tel" placeholder="Enter Subject" class="box">
-            <textarea placeholder="Enter Message" class="box" cols="30" rows="10"></textarea>
+            <input type="text" id= "name" placeholder="Enter Name" class="box">
+            <input type="email" id = "email" placeholder="Enter Email" class="box">
+            <input type="text" id= "subject" placeholder="Enter Subject" class="box">
+            <textarea id="message" placeholder="Enter Message" class="box" cols="30" rows="10"></textarea>
             <input type="submit" value="Send Message" class="btn">
         </form>
 
     </div>
 
 </section>
-
 
 <!-- footer section starts  -->
 
@@ -382,6 +381,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src ="https://smtpjs.com/v3/smtp.js"></script>
     <script src="script.js"></script>
     <script src="scriptDB.js"></script>
 </body>

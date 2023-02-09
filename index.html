@@ -64,7 +64,7 @@
                 <div class="form__input-error-message"></div>
             </div>
             <div class="form__input-group">
-                <input type="text" id="signupEmail" class="form__input" autofocus placeholder="Email (Optional)">
+                <input type="text" id="signupEmail" class="form__input" autofocus placeholder="Email Address" required>
                 <div class="form__input-error-message"></div>
             </div>
             <div class="form__input-group">
@@ -89,7 +89,25 @@
         <div class="home-text">
             <h1>Leading Valorant Coaching Platform</h1>
             <p> Become a better gamer! Start enjoying the game and experiencing it to the fullest.</p>
+            <div id="book-btn">
+                <button class="btn">Book Now!</button>
+                <i class="far fa-user"></i>                
+            </div>
+        </div>
+        <div class="book-form-container">
 
+            <span class="fas fa-times" id="close-book-form"  > </span>
+        
+            <form action="#home" method="GET">
+                <h3>Booking</h3>
+                <input type="text" placeholder="Enter Name" class="box" required>
+                <input type="email" placeholder="Enter Email" class="box" required>
+                <input type="date" class="box" required>
+                <textarea placeholder="Enter Message" class="box" cols="30" rows="3" required></textarea>
+                <input type="submit" value="Book Coaching" class="btnss">      
+            </form>
+        
+        </div>
         </div>
     </section>
 
@@ -130,7 +148,7 @@
         <div class="icons">
             <img src="images/icon-2.png" alt="">
             <div class="info">
-                <h3>3 days returns</h3>
+                <h3>3 Days Returns</h3>
                 <span>If no one coached u in the past 3 days Moneyback Guranteed</span>
             </div>
         </div>
@@ -138,7 +156,7 @@
         <div class="icons">
             <img src="images/icon-3.png" alt="">
             <div class="info">
-                <h3>offer & gifts</h3>
+                <h3>Gift Cards</h3>
                 <span>After Purchases</span>
             </div>
         </div>
@@ -146,8 +164,8 @@
         <div class="icons">
             <img src="images/icon-4.png" alt="">
             <div class="info">
-                <h3>secure payments</h3>
-                <span>protected by paypal</span>
+                <h3>Secure Payments</h3>
+                <span>Protected By PayPal</span>
             </div>
         </div>
     </section>
@@ -322,11 +340,11 @@
 
         <div class="box">
             <h3>Quick Links</h3>
-            <a href="#">Home</a>
-            <a href="#">About Us</a>
-            <a href="#">Reviews</a>
-            <a href="#">Coach Details</a>
-            <a href="#">Contact Us</a>
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#details">Coach Details</a>
+            <a href="#contact">Contact Us</a>
         </div>
 
         <div class="box">

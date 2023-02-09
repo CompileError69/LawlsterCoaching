@@ -131,180 +131,88 @@ var swiper = new Swiper(".reviews-slider", {
     },
 });
 
-/* -------------------- Handling Database -------------------- */
-$(document).ready(function() {
-  const APIKEY = "63dfe1ab3bc6b255ed0c46bf";
+/* Database */
+const APIKEY = "63dfe1ab3bc6b255ed0c46bf";
 
-  // Function to GET data (For user accounts)
-  function getContacts() {
-      var getSettings = {
-          "async": true,
-          "crossDomain": true,
-          "url": "https://lawlstercoachingdb-781d.restdb.io/rest/user-info",
-          "method": "GET",
-          "headers": {
-            "content-type": "application/json",
-            "x-apikey": APIKEY,
-            "cache-control": "no-cache"
-          }
-      }
-        
-      $.ajax(getSettings).done(function (response) {
-          console.log(response);
-      });
+// GET Data
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://lawlstercoachingdb-781d.restdb.io/rest/user-info",
+  "method": "GET",
+  "headers": {
+    "content-type": "application/json",
+    "x-apikey": APIKEY,
+    "cache-control": "no-cache"
   }
+}
 
-  // Funtion to handle click event and POST data (After user creates an account)
-  $("#signupSubmit").on("click", function(e) {
-      e.preventDefault();
+let jsondata = {
+  "name": contactName,
+  "email": contactEmail,
+  "password": contactMessage
+};
 
-      // Get the values from the fields
-      let signupEmail = $("#signupEmail").val();
-      let signupUsername = $("#signupUsername").val();
-      let signupPassword = $("#signupPassword").val();
-      let signupConfirmPassword = $("#signupConfirmPassword").val();
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
+
+// POST Data
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://lawlstercoachingdb-781d.restdb.io/rest/user-info",
+  "method": "POST",
+  "headers": {
+    "content-type": "application/json",
+    "x-apikey": "<your CORS apikey here>",
+    "cache-control": "no-cache"
+  },
+  "processData": false,
+  "data": JSON.stringify(jsondata)
+}
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
+
+
+function sendEmail(){
   
-      let jsondata = {
-        "email": signupEmail,
-        "username": signupUsername,
-        "password": signupPassword
-      };
-      
-      // GET request settings
-      var getSettings = {
-          "async": true,
-          "crossDomain": true,
-          "url": "https://lawlstercoachingdb-781d.restdb.io/rest/user-info",
-          "method": "GET",
-          "headers": {
-            "content-type": "application/json",
-            "x-apikey": APIKEY,
-            "cache-control": "no-cache"
-          }
-      }
-      
-      //GET request to retrieve data from the database
-      $.ajax(getSettings).done(function (response) {
-          let usernameExists = false;
-          
-          // Create an array of usernames from the database
-          usernameExists = response.map(user => user.username);
-
-          // Check if input username exists
-          if (usernameExists.includes(signupUsername)) {
-              $(".form__input-error-message").html("Username already exists").css("color", "red");
-              return false;
-          } else {
-              // POST request settings
-              var postSettings = {
-                  "async": true,
-                  "crossDomain": true,
-                  "url": "https://lawlstercoachingdb-781d.restdb.io/rest/user-info",
-                  "method": "POST",
-                  "headers": {
-                  "content-type": "application/json",
-                  "x-apikey": APIKEY,
-                  "cache-control": "no-cache"
-                  },
-                  "processData": false,
-                  "data": JSON.stringify(jsondata),
-                  "beforeSend": function() {
-                      $("#signupSubmit").prop("disabled", true);
-                      $("#createAccount").trigger("reset");
-                  }
-              }
-
-              $.ajax(postSettings).done(function (response) {
-                  console.log(response);
-                  $("#signupSubmit").prop("disabled", false);
-                  getContacts();
-              });
-          }
-      });
-  });
-
-  // Function to GET data (For user bookings)
-  function getContacts() {
-      var getSettings = {
-          "async": true,
-          "crossDomain": true,
-          "url": "https://lawlstercoachingdb-781d.restdb.io/rest/user-booking",
-          "method": "GET",
-          "headers": {
-            "content-type": "application/json",
-            "x-apikey": APIKEY,
-            "cache-control": "no-cache"
-          }
-      }
+  Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : 'vernonkoh123@gmail.com',
+    Password : "F3067591595AB4C402CB0B5A3FF33C715A30",
+    To : 'lawlsters03@gmail.com',
+    From : document.getElementById("email").value,
+    Subject :  "New Contact Us Enquiry",
+    Body : "Name: " + document.getElementById("name").value
+        + "<br> Email: " + document.getElementById("email").value
+        + "<br> Subject: " + document.getElementById("subject").value
+        + "<br> Message: " + document.getElementById("messages").value
         
-      $.ajax(getSettings).done(function (response) {
-          console.log(response);
-      });
-  }
+}).then(
+  message => alert("Message Sent Succesfully")
+);
+}
 
-  // Funtion to handle click event and POST data (After user make a booking)
-  $("#signupSubmit").on("click", function(e) {
-      e.preventDefault();
-
-      // Get the values from the fields
-      let signupEmail = $("#signupEmail").val();
-      let signupUsername = $("#signupUsername").val();
-      let signupPassword = $("#signupPassword").val();
-      let signupConfirmPassword = $("#signupConfirmPassword").val();
+/*
+function sendEmail(){
   
-      let jsondata = {
+  Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : 'vernonkoh123@gmail.com',
+    Password : "F3067591595AB4C402CB0B5A3FF33C715A30",
+    To : document.getElementById("email").value,
+    From : 'vernonkoh123@gmail.com',
+    Subject :  "New Contact Us Enquiry",
+    Body : "Name: " + document.getElementById("name").value
+        + "<br> Email: " + document.getElementById("email").value
+        + "<br> Message: Thank you for submitting your Enquiries we will get back to you soon"
+        
+}).then(
+  message => alert("Message Sent Succesfully")
+);
+}
 
-      };
-      
-      // GET request settings
-      var getSettings = {
-          "async": true,
-          "crossDomain": true,
-          "url": "https://lawlstercoachingdb-781d.restdb.io/rest/user-booking",
-          "method": "GET",
-          "headers": {
-            "content-type": "application/json",
-            "x-apikey": APIKEY,
-            "cache-control": "no-cache"
-          }
-      }
-      
-      //GET request to retrieve data from the database
-      $.ajax(getSettings).done(function (response) {
-          let usernameExists = false;
-          
-          // Create an array of usernames from the database
-          usernameExists = response.map(user => user.username);
-
-          // Check if input username exists
-          if (usernameExists.includes(signupUsername)) {
-              $(".form__input-error-message").html("Username already exists").css("color", "var(--color-error)");
-          } else {
-              // POST request settings
-              var postSettings = {
-                  "async": true,
-                  "crossDomain": true,
-                  "url": "https://lawlstercoachingdb-781d.restdb.io/rest/user-booking",
-                  "method": "POST",
-                  "headers": {
-                  "content-type": "application/json",
-                  "x-apikey": APIKEY,
-                  "cache-control": "no-cache"
-                  },
-                  "processData": false,
-                  "data": JSON.stringify(jsondata),
-                  "beforeSend": function() {
-                      $("#signupSubmit").prop("disabled", true);
-                      $("#createAccount").trigger("reset");
-                  }
-              }
-
-              $.ajax(postSettings).done(function (response) {
-                  console.log(response);
-                  $("#signupSubmit").prop("disabled", false);
-                  getContacts();
-              });
-          }
-      });
-  });
-})
+*/

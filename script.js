@@ -23,6 +23,16 @@ document.querySelector("#login-btn").onclick = () => {
   window.onscroll = () => {
     menu.classList.remove("active");
   };
+
+  document.querySelector('#book-btn').onclick = () =>{
+    document.querySelector('.book-form-container').classList.toggle('active');
+  }
+  
+  
+  document.querySelector('#close-book-form').onclick = () =>{
+    document.querySelector('.book-form-container').classList.remove('active');
+  }
+  
   
 
   /* new login */
@@ -172,7 +182,7 @@ function sendEmail(){
     Body : "Name: " + document.getElementById("name").value
         + "<br> Email: " + document.getElementById("email").value
         + "<br> Subject: " + document.getElementById("subject").value
-        + "<br> Message: " + document.getElementById("messages").value
+        + "<br> Message: " + document.getElementById("message").value
         
 }).then(
   message => alert("Message Sent Succesfully")

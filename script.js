@@ -23,13 +23,7 @@ document.querySelector("#login-btn").onclick = () => {
   window.onscroll = () => {
     menu.classList.remove("active");
   };
-  document.querySelector("#book-btn").onclick = () => {
-    document.querySelector(".book-form-container").classList.toggle("active");
-  };
   
-  document.querySelector("#close-book-form").onclick = () => {
-    document.querySelector(".book-form-container").classList.remove("active");
-  };
 
   /* new login */
   function setFormMessage(formElement, type, message) {
@@ -119,3 +113,89 @@ var swiper = new Swiper(".reviews-slider", {
       },
     },
 });
+
+/* Database */
+const APIKEY = "63dfe1ab3bc6b255ed0c46bf";
+
+// GET Data
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://lawlstercoachingdb-781d.restdb.io/rest/user-info",
+  "method": "GET",
+  "headers": {
+    "content-type": "application/json",
+    "x-apikey": APIKEY,
+    "cache-control": "no-cache"
+  }
+}
+
+let jsondata = {
+  "name": contactName,
+  "email": contactEmail,
+  "password": contactMessage
+};
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
+
+// POST Data
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://lawlstercoachingdb-781d.restdb.io/rest/user-info",
+  "method": "POST",
+  "headers": {
+    "content-type": "application/json",
+    "x-apikey": "<your CORS apikey here>",
+    "cache-control": "no-cache"
+  },
+  "processData": false,
+  "data": JSON.stringify(jsondata)
+}
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
+
+
+function sendEmail(){
+  
+  Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : 'vernonkoh123@gmail.com',
+    Password : "F3067591595AB4C402CB0B5A3FF33C715A30",
+    To : 'lawlsters03@gmail.com',
+    From : document.getElementById("email").value,
+    Subject :  "New Contact Us Enquiry",
+    Body : "Name: " + document.getElementById("name").value
+        + "<br> Email: " + document.getElementById("email").value
+        + "<br> Subject: " + document.getElementById("subject").value
+        + "<br> Message: " + document.getElementById("messages").value
+        
+}).then(
+  message => alert("Message Sent Succesfully")
+);
+}
+
+/*
+function sendEmail(){
+  
+  Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : 'vernonkoh123@gmail.com',
+    Password : "F3067591595AB4C402CB0B5A3FF33C715A30",
+    To : document.getElementById("email").value,
+    From : 'vernonkoh123@gmail.com',
+    Subject :  "New Contact Us Enquiry",
+    Body : "Name: " + document.getElementById("name").value
+        + "<br> Email: " + document.getElementById("email").value
+        + "<br> Message: Thank you for submitting your Enquiries we will get back to you soon"
+        
+}).then(
+  message => alert("Message Sent Succesfully")
+);
+}
+
+*/

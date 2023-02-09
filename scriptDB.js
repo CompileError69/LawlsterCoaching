@@ -6,7 +6,7 @@ $(document).ready(function() {
 
     // Function to GET data
     function getContacts() {
-        var settings = {
+        var getSettings = {
             "async": true,
             "crossDomain": true,
             "url": "https://lawlstercoachingdb-781d.restdb.io/rest/user-info",
@@ -18,64 +18,81 @@ $(document).ready(function() {
             }
         }
           
-        $.ajax(settings).done(function (response) {
+        $.ajax(getSettings).done(function (response) {
             console.log(response);
         });
     }
 
-    // Funtion to POST data
+    // Funtion to handle click event and POS data
     $("#signupSubmit").on("click", function(e) {
         e.preventDefault();
-    
-        //[STEP 2]: let's retrieve form data
-        //for now we assume all information is valid
-        //you are to do your own data validation
+
+        // Get the values from the fields
         let signupEmail = $("#signupEmail").val();
         let signupUsername = $("#signupUsername").val();
         let signupPassword = $("#signupPassword").val();
+        let signupConfirmPassword = $("#signupConfirmPassword").val();
+
+        // Check if passwords in both fields match
+        if (signupPassword !== signupConfirmPassword) {
+            $(".form__input-error-message").html("Passwords do not match").css("color", "red");
+            return false;
+        }
     
-        //[STEP 3]: get form values when user clicks on send
-        //Adapted from restdb api
         let jsondata = {
           "email": signupEmail,
           "username": signupUsername,
           "password": signupPassword
         };
-
-        // POST Data
-        var settings = {
+        
+        // GET request settings
+        var getSettings = {
             "async": true,
             "crossDomain": true,
             "url": "https://lawlstercoachingdb-781d.restdb.io/rest/user-info",
-            "method": "POST",
+            "method": "GET",
             "headers": {
-            "content-type": "application/json",
-            "x-apikey": APIKEY,
-            "cache-control": "no-cache"
-            },
-            "processData": false,
-            "data": JSON.stringify(jsondata),
-            "beforeSend": function() {
-                $("#signupSubmit").prop("disabled", true);
-                $("#createAccount").trigger("reset");
+              "content-type": "application/json",
+              "x-apikey": APIKEY,
+              "cache-control": "no-cache"
             }
         }
-    
-        /* Password validation (Testing. Not finalized)
-        $('#signupPassword, #signupConfirmPassword').on('keyup', function () {
-            if ($('#signupPassword').val() == $('#signupConfirmPassword').val()) {
-              $('.form__input-error-message').html('Password Matches)').css('color', 'green');
-              $.ajax(settings).done(function (response) {
-                console.log(response);
-                getContacts();
-            });
-            } else 
-              $('.form__input-error-message').html('Not Matching').css('color', 'red');
-        });*/
         
-        $.ajax(settings).done(function (response) {
-            console.log(response);
-            getContacts();
+        //GET request to retrieve data from the database
+        $.ajax(getSettings).done(function (response) {
+            let usernameExists = false;
+            
+            // Create an array of usernames from the database
+            usernameExists = response.map(user => user.username);
+
+            // Check if input username exists
+            if (usernameExists.includes(signupUsername)) {
+                $(".form__input-error-message").html("Username already exists").css("color", "red");
+            } else {
+                // POST request settings
+                var postSettings = {
+                    "async": true,
+                    "crossDomain": true,
+                    "url": "https://lawlstercoachingdb-781d.restdb.io/rest/user-info",
+                    "method": "POST",
+                    "headers": {
+                    "content-type": "application/json",
+                    "x-apikey": APIKEY,
+                    "cache-control": "no-cache"
+                    },
+                    "processData": false,
+                    "data": JSON.stringify(jsondata),
+                    "beforeSend": function() {
+                        $("#signupSubmit").prop("disabled", true);
+                        $("#createAccount").trigger("reset");
+                    }
+                }
+
+                $.ajax(postSettings).done(function (response) {
+                    console.log(response);
+                    getContacts();
+                });
+            }
         });
     });
 })

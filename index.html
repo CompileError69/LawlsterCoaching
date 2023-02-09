@@ -35,7 +35,6 @@
 
     <!-- Login form -->
     <div class="login-form-container">
-
         <span class="fas fa-times" id="close-login-form"  > </span>
         <form class = "form" id="login">
             <h1 class = "form__title"> Login</h1>
@@ -56,6 +55,7 @@
                 <a class="form__link" href="./" id="linkCreateAccount">Don't have an account? Create account</a>
             </p>
         </form>
+        
         <form class="form form--hidden" id="createAccount">
             <h1 class="form__title">Create Account</h1>
             <div class="form__message form__message--error"></div>
@@ -64,7 +64,7 @@
                 <div class="form__input-error-message"></div>
             </div>
             <div class="form__input-group">
-                <input type="text" id="signupEmail" class="form__input" autofocus placeholder="Email Address">
+                <input type="text" id="signupEmail" class="form__input" autofocus placeholder="Email Address" required>
                 <div class="form__input-error-message"></div>
             </div>
             <div class="form__input-group">
@@ -89,7 +89,25 @@
         <div class="home-text">
             <h1>Leading Valorant Coaching Platform</h1>
             <p> Become a better gamer! Start enjoying the game and experiencing it to the fullest.</p>
+            <div id="book-btn">
+                <button class="btn">Book Now!</button>
+                <i class="far fa-user"></i>                
+            </div>
+        </div>
+        <div class="book-form-container">
 
+            <span class="fas fa-times" id="close-book-form"  > </span>
+        
+            <form action="#home" method="GET">
+                <h3>Booking</h3>
+                <input type="text" placeholder="Enter Name" class="box" required>
+                <input type="email" placeholder="Enter Email" class="box" required>
+                <input type="date" class="box" required>
+                <textarea placeholder="Enter Message" class="box" cols="30" rows="3" required></textarea>
+                <input type="submit" value="Book Coaching" class="btnss">      
+            </form>
+        
+        </div>
         </div>
     </section>
 

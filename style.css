@@ -29,12 +29,25 @@
     --color-success: #4bb544;
     --pink:#e84393;
     --border-radius: 4px;
+    --green:#27ae60;
+    --dark-color:#219150;
+    --black:#444;
+    --light-color:#666;
+    --border-hover:.1rem solid var(--black);
 }
+
+
+html{
+    font-size: 86.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
 
 section{
-    padding: 4rem 0 2rem;
+    padding:2rem 9%;
 }
-
 img{
 	width: 100%;
 }
@@ -126,7 +139,7 @@ header.shadow{
     min-height: 640px;
     display: flex;
     align-items: center;
-    background: url('./images/afkgaming_import_media_images_97672-1f36a4f2cbf61c0fa45a7e242364aa02.avif');;
+    background: url('./images//Valorant-ss-scaled-1.jpg');;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center left;
@@ -142,7 +155,7 @@ header.shadow{
 }
 
 .home-text p {
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight: 800;
     margin: 0.5rem 0 1.2rem;
     color: white;
@@ -207,7 +220,7 @@ header.shadow{
     margin:2rem;
     text-align: center;
     padding:2rem;
-    width:40rem;
+    width:50rem;
     border-radius: .5rem;
     box-shadow: var(--box-shadow);
     border:var(--border);
@@ -216,7 +229,7 @@ header.shadow{
 
 .login-form-container form .buttons{
     display: flex;
-    gap:1rem;
+    gap:2rem;
     align-items: center;
 }
 
@@ -417,7 +430,7 @@ header.shadow{
 .about .row .video-container video{
     width:100%;
     border:1.5rem solid var(--black);
-    border-radius: .5rem;
+    border-radius: 1rem;
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
     height: 100%;
     object-fit: cover;
@@ -501,13 +514,317 @@ header.shadow{
     background:var(--pink);
 }
 
+/* Subscribe page */
+.newsletter{
+    background:url(https://cdn1.epicgames.com/offer/cbd5b3d310a54b12bf3fe8c41994174f/VAL_2560x1440-a875b64f871200771ee9397df1d7050b) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
 
+.newsletter form{
+    max-width: 35rem;
+    margin-left: auto;
+    text-align: center;
+    padding:5rem 0;
+}
+
+.newsletter form h3{
+    font-size: 1.8rem;
+    color:#fff;
+    padding-bottom: .4rem;
+    font-weight: normal;
+}
+
+.newsletter form .box{
+    width: 100%;
+    margin: .7rem 0;
+    padding:1rem 1.2rem;
+    font-size: 1.2rem;
+    color:var(--black);
+    border-radius: .9rem;
+    text-transform: none;
+}
+
+/* Reviews */
+.headings{
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+.headings::before{
+    content: '';
+    position: absolute;
+    top:50%; left:0;
+    transform: translateY(-50%);
+    width: 100%;
+    height:.01rem;
+    background: rgba(0,0,0,.1);
+    z-index: -1;
+}
+
+.headings span{
+    font-size: 3rem;
+    padding:.5rem 2rem;
+    color:var(--black);
+    background: #fff;
+    border:var(--border);
+}
+.reviews .reviews-slider .box{
+    border:var(--border);
+    padding:2rem;
+    text-align: center;
+    width: 50rem;
+
+
+}
+
+.reviews .reviews-slider .box:hover{
+    border:var(--border-hover);
+}
+
+.reviews .reviews-slider .box img{
+    height:7rem;
+    width:7rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.reviews .reviews-slider .box h3{
+    color:var(--black);
+    font-size: 2.2rem;
+    padding:.5rem 0;
+}
+
+.reviews .reviews-slider .box p{
+    color:var(--light-color);
+    font-size: 1.4rem;
+    padding:1rem 0;
+    line-height: 2;
+}
+
+.reviews .reviews-slider .box .stars{
+    padding-top: .5rem;
+}
+
+.reviews .reviews-slider .box .stars i{
+    font-size: 1.7rem;
+    color:var(--green);
+}
+
+
+.section-3{
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(./images/Valorant-ss-scaled-1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+    
+}
+.section-3 h1{
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+    font-weight: 800;
+
+}
+
+.section-3-wrapper{
+    display: flex;
+    min-height: 70vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.feedback{
+    width: 250px;
+    height: 300px;
+    background: url(./images/vernon.jpg);
+    background-position: center;
+    background-size: cover;
+ 
+}
+.feedback-desc{
+    width: 300px;
+    height: 300px;
+    background: rgba(0, 0, 0, 0.767);
+    padding: 10px;
+    color: #fff;
+    margin-right: 10px;
+    font-size: 15px;
+    
+}
+.feedback-desc .far{
+    color: #FEC53A;
+    font-size: 50px;
+
+}
+.f-img-2{
+    background: url(./images/joshua.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+/* contact page */
+.contact .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+
+.contact .row .map{
+    flex:1 1 42rem;
+    width: 100%;
+    padding:2rem;
+    box-shadow: var(--box-shadow);
+    border:var(--border);
+    border-radius: .5rem;
+    height: 50rem;
+}
+
+.contact .row form{
+    padding:2rem;
+    flex:1 1 42rem;
+    box-shadow: var(--box-shadow);
+    border:var(--border);
+    text-align: center;
+    border-radius: .5rem;
+
+}
+
+.contact .row form h3{
+    font-size: 3rem;
+    color:var(--black);
+    padding-bottom: 1rem;
+}
+
+.contact .row form .box{
+    width:100%;
+    border-radius: .5rem;
+    padding:1rem 1.2rem;
+    font-size: 1.6rem;
+    text-transform: none;
+    border:var(--border);
+    margin:.7rem 0;
+}
+
+.contact .row form textarea{
+    height:15rem;
+    resize: none;
+}
+
+.contactheadings{
+    padding-bottom: 2rem;
+    text-align: center;
+    font-size: 4.5rem;
+    color:var(--black);
+}
+
+
+/* Footer */
+.footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+
+.footer .box-container .box{
+    flex:1 1 25rem;
+}
+
+.footer .box-container .box h3{
+    color:#333;
+    font-size: 2.5rem;
+    padding:1rem 0;
+}
+
+.footer .box-container .box a{
+    display: block;
+    color:#666;
+    font-size: 1.5rem;
+    padding:1rem 0;
+}
+
+.footer .box-container .box a:hover{
+    color:var(--pink);
+    text-decoration: underline;
+}
+
+.footer .box-container .box  img{
+    margin-top: 1rem;
+    width: 60%;
+
+}
+
+
+.inner-footer {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.social-links{
+    display: flex;
+}
+
+.social-links ul{
+    padding: 10px;
+    display: flex;
+    width: 400px;
+    height: 80px;
+    margin: auto;
+}
+.social-items{
+    list-style:none;
+}
+.social-items a{
+    padding: 10px 30px;
+    font-size: 40px;
+    color: white;
+
+}
+.social-items a:hover{
+    color: red;
+}
+
+
+.outer-footer{
+    padding: 15px;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    background-color: #191919;
+
+}
+@media (max-width:991px){
+    
+    html{
+        font-size: 55%;
+    }
+
+    header{
+        padding:2rem;
+    }
+
+    section{
+        padding:2rem;
+    }
+
+    .home{
+        background-position: left;
+    }
+
+}
 @media (max-width: 1080px ) {
     .container {
         margin-left: 1rem;
         margin-right: 1rem;
     }
 }
+
+
 
 @media (max-width: 991px) {
     .nav {
@@ -575,4 +892,25 @@ header.shadow{
     }
 }
 
+@media (max-width: 968px) {
+    .section-3{
+        text-align: center;
+        font-size: 1px;
 
+    }
+    .section-3-wrapper{
+        flex-direction: column;
+        font-size: 1px;
+    }
+}
+@media (max-width:450px){
+    
+    html{
+        font-size: 50%;
+    }
+
+    .heading{
+        font-size: 3rem;
+    }
+
+}

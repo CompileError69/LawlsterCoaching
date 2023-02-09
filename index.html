@@ -6,21 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> LawlsterCoaching </title>
     <link rel="shortcut icon" href="/assets/favicon.ico">
-    <link rel="stylesheet" href = "style.css" >
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href = "style.css" >
 </head>
-<!--- Nav bar -->
+
 <body>
+    <!-- Nav bar -->
     <header>
         <div class = "nav container">
             <i class='bx bx-menu' id = "menu-icon"></i>
             <a href ="#" class = "logo"> Lawlster<span class="symbol">&reg;</span></a>
             <ul class = "navbar">
-                <li><a href="#home"> Home </a></li>
-                <li><a href="#about"> About </a></li>
-                <li><a href="#services"> Services </a></li>
-                <li><a href="#book"> Book appointment </a></li>
+                <li><a href="#home" class = "active"> Home </a></li>
+                <li><a href="#about"> About Us </a></li>
+                <li><a href="#reviews"> Reviews </a></li>
+                <li><a href="#details"> Coach Details  </a></li>
+                <li><a href="#contact"> Contact Us  </a></li>
             </ul>
             <div id="login-btn">
                 <button class="btn">LOGIN</button>
@@ -28,9 +32,9 @@
             </div>
         </div>
     </header>
-<!--- Login form -->
-    <div class="login-form-container">
 
+    <!-- Login form -->
+    <div class="login-form-container">
         <span class="fas fa-times" id="close-login-form"  > </span>
         <form class = "form" id="login">
             <h1 class = "form__title"> Login</h1>
@@ -51,6 +55,7 @@
                 <a class="form__link" href="./" id="linkCreateAccount">Don't have an account? Create account</a>
             </p>
         </form>
+        
         <form class="form form--hidden" id="createAccount">
             <h1 class="form__title">Create Account</h1>
             <div class="form__message form__message--error"></div>
@@ -59,26 +64,27 @@
                 <div class="form__input-error-message"></div>
             </div>
             <div class="form__input-group">
-                <input type="text" class="form__input" autofocus placeholder="Email Address">
+                <input type="text" id="signupEmail" class="form__input" autofocus placeholder="Email Address">
                 <div class="form__input-error-message"></div>
             </div>
             <div class="form__input-group">
-                <input type="password" class="form__input" autofocus placeholder="Password">
+                <input type="password" id="signupPassword" class="form__input" autofocus placeholder="Password">
                 <div class="form__input-error-message"></div>
             </div>
             <div class="form__input-group">
-                <input type="password" class="form__input" autofocus placeholder="Confirm password">
+                <input type="password" id="signupConfirmPassword" class="form__input" autofocus placeholder="Confirm password">
                 <div class="form__input-error-message"></div>
             </div>
-            <button class="form__button" type="submit">Continue</button>
+            <button type="submit" id="signupSubmit" class="form__button">Login</button>
             <p class="form__text">
                 <a class="form__link" href="./" id="linkLogin">Already have an account? Sign in</a>
             </p>
         </form>
         </form>
-   
+
     </div>
-<!--- Background image -->
+
+    <!-- Background image -->
     <section class="home" id="home">
         <div class="home-text">
             <h1>Leading Valorant Coaching Platform</h1>
@@ -86,34 +92,33 @@
 
         </div>
     </section>
-<section class="about" id="about">
 
-    <h1 class="heading"> <span> About </span> Us </h1>
+    <section class="about" id="about">
 
-    <div class="row">
+        <h1 class="heading"> <span> About </span> Us </h1>
 
-        <div class="video-container">
-            <video src="images/Valorant project.mp4" loop autoplay muted></video>
-            <h3>We Have The Best Coaches</h3>
+        <div class="row">
+
+            <div class="video-container">
+                <video src="images/Valorant projects.mp4" loop autoplay muted></video>
+                <h3>We Have The Best Coaches</h3>
+            </div>
+
+            <div class="content">
+                <h3>What is Valorant Coaching?</h3>
+                <p>Valorant coaching refers to the process of giving the knowledge of a professional Valorant player to another who is willing to take his game to the next level.</p>
+                <p>Commonly, the idea can be associated with an online teacher-student relation, centered on the student's improvement at the game with the exception that online game coaching for Valorant is a much more satisfying practice than the tedious education methods that most of us are used.</p>
+                <a href="#" class="btns">Learn More</a>
+            </div>
+
         </div>
 
-        <div class="content">
-            <h3>What is Valorant Coaching?</h3>
-            <p>Valorant coaching refers to the process of giving the knowledge of a professional Valorant player to another who is willing to take his game to the next level.</p>
-            <p>Commonly, the idea can be associated with an online teacher-student relation, centered on the student's improvement at the game with the exception that online game coaching for Valorant is a much more satisfying practice than the tedious education methods that most of us are used.</p>
-            <a href="#" class="btns">Learn More</a>
-        </div>
-
-    </div>
-
-</section>
-    
+    </section>
     <!-- about section ends -->
-    
+        
     <!-- icons section starts  -->
-    
-    <section class="icons-container">
-    
+    <section class="icons-container" >
+
         <div class="icons">
             <img src="images/icon-1.png" alt="">
             <div class="info">
@@ -121,7 +126,7 @@
                 <span>Conducted at home</span>
             </div>
         </div>
-    
+
         <div class="icons">
             <img src="images/icon-2.png" alt="">
             <div class="info">
@@ -129,7 +134,7 @@
                 <span>If no one coached u in the past 3 days Moneyback Guranteed</span>
             </div>
         </div>
-    
+
         <div class="icons">
             <img src="images/icon-3.png" alt="">
             <div class="info">
@@ -137,7 +142,7 @@
                 <span>After Purchases</span>
             </div>
         </div>
-    
+
         <div class="icons">
             <img src="images/icon-4.png" alt="">
             <div class="info">
@@ -145,14 +150,240 @@
                 <span>protected by paypal</span>
             </div>
         </div>
-       
     </section>
-    
+
+    <!-- newsletter section starts -->
+    <section class="newsletter">
+
+        <form action="">
+            <h3>Subscribe For Latest Discounts</h3>
+            <input type="email" name="" placeholder="Enter Your Email" id="" class="box">
+            <input type="submit" value="Subscribe" class="btns">
+        </form>
+
+    </section>
+
+    <!-- reviews section starts  -->
+    <section class="reviews" id="reviews">
+
+        <h1 class="headings"> <span>Client's Reviews</span> </h1>
+
+        <div class="swiper reviews-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide box">
+                    <img src="images/isabel 2.jpg" alt="">
+                    <h3>Isabel</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur nihil ipsa placeat. Aperiam at sint, eos ex similique facere hic.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+            <div class="swiper-slide box">
+                <img src="images/joshua.jpg" alt="">
+                <h3>Joshua</h3>
+                <p>Very kind and patient! Will purchase more and contact him when I need more help :) He went past the allocated hours as well !!</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="images/aaron.jpg" alt="">
+                <h3>Aaron</h3>
+                <p>He was patient with his coaching although I didn't understood. Went from Silver 1 to Plat 2 in a week with his coaching.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <img src="images/junwei.jpg" alt="">
+                <h3>Junwei</h3>
+                <p>Very friendly and taught me how to improve my aim, The different ways to peek an angle and how to have better game sense</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="images/wei heng.jpg" alt="">
+                <h3>Wei Heng</h3>
+                <p>The coach was very patient and understandable, and always answer my questions when I'm in doubt.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="images/jasper.jpg" alt="">
+                <h3>Jasper</h3>
+                <p>Goes through everything in detail with alot of effort and make sure you understand no matter the hours!</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="images/yourong.jpg" alt="">
+                <h3>Yourong</h3>
+                <p>The coach knows his stuff. Coached me all the way from plat 2 to diamond 2. Definitely worth trying out his coaching sessions.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+                
+
+            </div>
+
+        </div>
+        
+    </section>
+    <!-- reviews section ends -->
+
+
+<div class="section-3" id="details">
+    <h1>Details About the Coaches</h1>
+    <div class="section-3-wrapper">
+        <div class="feedback"></div>
+        <div class="feedback-desc">
+            <p>Will help improve your mechanics (aim/movement/commms)<br>
+                Will improve your rank significantly.
+                Can teach you to read the game and transfer it into a team environment.</p>
+            <br>
+            <i class="far fa-grin-squint-tears"></i><br>
+            <h4>Vernon</h4>
+        </div>
+        <!-- =========================== -->
+        <div class="feedback f-img-2"></div>
+        <div class="feedback-desc">
+            <p>My in-depth guides help to improve your game mechanics and gamesense (aim, movement, positioning, etc.) Faster RANK UP, Better GAMEPLAY!<br>
+                IGL&Initiator and personal coach on the pro stage. I can be a coach at any rank. Iron to Radiant!</p>
+            <br>
+            <i class="far fa-grin-beam-sweat"></i><br>
+            <h4>Joshua</h4>
+        </div>
+    </div>
+</div>
+<!--- Contact us ---->
+<section class="contact" id="contact">
+
+    <h1 class="contactheadings"> Contact Us </h1>
+
+    <div class="row">
+        <iframe class = "map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2820.5017802775665!2d103.85341123658675!3d1.2996884997029594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1936beecf457%3A0xf89eb80633e02ddc!2sReality%20Rift%20Arena%20Bugis%2B!5e0!3m2!1sen!2ssg!4v1675709139123!5m2!1sen!2ssg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <h3>Message Us</h3>
+            <input type="text" id= "name" placeholder="Enter Name" class="box">
+            <input type="email" id = "email" placeholder="Enter Email" class="box">
+            <input type="text" id= "subject" placeholder="Enter Subject" class="box">
+            <textarea id="message" placeholder="Enter Message" class="box" cols="30" rows="10"></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+
+    </div>
+
+</section>
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>Quick Links</h3>
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Reviews</a>
+            <a href="#">Coach Details</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <div class="box">
+            <h3>Extra Links</h3>
+            <a href="#">Carousel Page</a>
+            <a href="#">TikTok Page</a>
+        </div>
+
+        <div class="box">
+            <h3>Locations</h3>
+            <a href="#">Singapore</a>
+        </div>
+
+        <div class="box">
+            <h3>Contact Info</h3>
+            <a href="#">+65 91234567</a>
+            <a href="#">vernonkoh123@gmail.com</a>
+            <a href="#">Singapore</a>
+            <img src="images/payment.png" alt="">
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer class = "footer">
+    <div class = "inner-footer">
+        <div class = "social-links">
+            <ul>
+                <li class = "social-items"><a href="https://www.facebook.com/bugatti/"><i class = "fab fa-facebook"></i></a></li>
+                <li class = "social-items"><a href="https://www.instagram.com/bugatti/"><i class = "fab fa-instagram"></i></a></li>
+                <li class = "social-items"><a href="https://twitter.com/Bugatti"><i class = "fab fa-twitter"></i></a></li>
+                <li class = "social-items"><a href="https://www.youtube.com/BugattiSocial"><i class = "fab fa-youtube"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class = "outer-footer">
+        Copyright &copy; El Lawlster PTE LTD
+    </div>
+
+</footer>
+
+<!-- footer section ends -->
+
+
+<!-- Loading screen -->
 <div class="loader-container">
     <img src = "images/loader-img.gif" alt="">
 </div>
-<script src="script.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src ="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="script.js"></script>
+    <script src="scriptDB.js"></script>
 </body>
 
 </html>

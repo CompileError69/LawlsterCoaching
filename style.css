@@ -11,7 +11,7 @@
 	box-sizing: border-box;
 }
 
-/* global variable for the colors */
+/* -------------------- Global variable for the colors -------------------- */
 :root {
 	--main-color : red;
 	--text-color: black;
@@ -87,7 +87,8 @@ header.shadow{
     box-shadow: 2px 4px 4px rgb(15 54 55 /20%);
     transition: 1.5s;
 }
-/* nav bar */
+
+/* -------------------- Nav bar -------------------- */
 .nav {
     display: flex;
     align-items: center;
@@ -160,8 +161,6 @@ header.shadow{
     margin: 0.5rem 0 1.2rem;
     color: white;
 }
-
-
 
 .btn:hover{
     background:var(--yellow);
@@ -277,8 +276,7 @@ header.shadow{
     background:yellow;
 }
 
-
-/* The new login */
+/* -------------------- The new login -------------------- */
 .logincontainer {
     width: 400px;
     max-width: 400px;
@@ -412,7 +410,8 @@ header.shadow{
     height: 5rem;
     width: 10rem;
 }
-/* about */
+
+/* -------------------- About -------------------- */
 .about .row{
     display: flex;
     align-items: center;
@@ -514,7 +513,7 @@ header.shadow{
     background:var(--pink);
 }
 
-/* Subscribe page */
+/* -------------------- Subscribe page -------------------- */
 .newsletter{
     background:url(https://cdn1.epicgames.com/offer/cbd5b3d310a54b12bf3fe8c41994174f/VAL_2560x1440-a875b64f871200771ee9397df1d7050b) no-repeat;
     background-size: cover;
@@ -667,7 +666,7 @@ header.shadow{
     background-size: cover;
 }
 
-/* contact page */
+/* -------------------- Contact page -------------------- */
 .contact .row{
     display: flex;
     flex-wrap: wrap;
@@ -723,7 +722,7 @@ header.shadow{
 }
 
 
-/* Footer */
+/* -------------------- Footer -------------------- */
 .footer .box-container{
     display: flex;
     flex-wrap: wrap;

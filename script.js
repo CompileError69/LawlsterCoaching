@@ -35,7 +35,7 @@ document.querySelector("#login-btn").onclick = () => {
   
   
 
-  /* new login */
+  /* New login */
   function setFormMessage(formElement, type, message) {
     const messageElement = formElement.querySelector(".form__message");
 
@@ -44,6 +44,7 @@ document.querySelector("#login-btn").onclick = () => {
     messageElement.classList.add(`form__message--${type}`);
 }
 
+/* Validation for input fields */
 function setInputError(inputElement, message) {
     inputElement.classList.add("form__input--error");
     inputElement.parentElement.querySelector(".form__input-error-message").textContent = message;
@@ -70,18 +71,34 @@ document.addEventListener("DOMContentLoaded", () => {
         createAccountForm.classList.add("form--hidden");
     });
 
+    /*
     loginForm.addEventListener("submit", e => {
         e.preventDefault();
 
         // Perform your AJAX/Fetch login
 
-        setFormMessage(loginForm, "error", "Invalid username/password combination");
-    });
-
+        //setFormMessage(loginForm, "error", "Invalid username/password combination");
+    });*/
+    
     document.querySelectorAll(".form__input").forEach(inputElement => {
         inputElement.addEventListener("blur", e => {
             if (e.target.id === "signupUsername" && e.target.value.length > 0 && e.target.value.length < 10) {
                 setInputError(inputElement, "Username must be at least 10 characters in length");
+            }
+
+            if ((e.target.id === "signupPassword" && e.target.value.length > 0) || (e.target.id === "signupConfirmPassword" && e.target.value.length > 0)) {
+              if (e.target.value.length < 8) {
+                  setInputError(inputElement, "Password must contain at least 8 characters");
+              } 
+              
+              if (e.target.id === "signupConfirmPassword") {
+                  let signupPassword = document.querySelector("#signupPassword").value;
+                  let signupConfirmPassword = document.querySelector("#signupConfirmPassword").value;
+  
+                  if (signupPassword !== signupConfirmPassword) {
+                      setInputError(inputElement, "Password does not match");
+                  }
+              }
             }
         });
 
@@ -90,6 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
 /* Loader */
 fadeOut();
 function loader(){
@@ -101,7 +119,6 @@ function fadeOut(){
 }
 
 /* Reviews */
-
 var swiper = new Swiper(".reviews-slider", {
     spaceBetween: 10,
     grabCursor:true,

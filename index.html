@@ -98,13 +98,13 @@
 
             <span class="fas fa-times" id="close-book-form"  > </span>
         
-            <form onsubmit="sendEmail(); reset(); return false;">
+            <form id="createBooking" onsubmit="sendEmail(); reset(); return false;">
                 <h3>Booking</h3>
-                <input type="text" placeholder="Enter Name" class="box" required>
-                <input type="email" placeholder="Enter Email" class="box" required>
-                <input type="date" class="box" required>
-                <textarea placeholder="Enter Message" class="box" cols="30" rows="3" required></textarea>
-                <input type="submit" value="Book Coaching" class="btnss">      
+                <input type="text" id="userName" placeholder="Enter Name" class="box" required>
+                <input type="email" id="bookingEmail" placeholder="Enter Email" class="box" required>
+                <input type="date" id="bookingDate" class="box" required>
+                <textarea id="msgDetails" placeholder="Enter Message" class="box" cols="30" rows="3" required></textarea>
+                <input id="bookingSubmit" type="submit" value="Book Coaching" class="btnss">      
             </form>
         
         </div>
@@ -124,6 +124,11 @@
 
             <div class="content">
                 <h3>What is Valorant Coaching?</h3>
+                <div class="lottieAnimation">
+                    <lottie-player src="https://assets3.lottiefiles.com/temp/lf20_9gY9Yf.json"
+                    background="transparent" speed="0.5" style="width: 50px; height: 50px;" loop autoplay>
+                    </lottie-player>
+                </div>
                 <p>Valorant coaching refers to the process of giving the knowledge of a professional Valorant player to another who is willing to take his game to the next level.</p>
                 <p>Commonly, the idea can be associated with an online teacher-student relation, centered on the student's improvement at the game with the exception that online game coaching for Valorant is a much more satisfying practice than the tedious education methods that most of us are used.</p>
                 <a href="#" class="btns">Learn More</a>
@@ -390,10 +395,10 @@
 <div class="loader-container">
     <img src = "images/loader-img.gif" alt="">
 </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src ="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="script.js"></script>
 </body>
 

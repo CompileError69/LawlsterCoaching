@@ -149,7 +149,7 @@ function loader(){
 }
 
 function fadeOut(){
-  setTimeout(loader,4000);
+  setTimeout(loader,3000);
 }
 
 /* Reviews */

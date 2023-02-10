@@ -30,7 +30,54 @@ We would like to create a website that is simple to navigate so that users will 
 * Putting up reviews from past customers to provide credibility
 
 ## Features :octocat:
+
+[Website](https://compileerror69.github.io/LawlsterCoaching/)
+
 ### Existing features
+* The Nav Bar at the top of the screen will collapse into a hamburger menu in mobile menu.
+
+* We are able to create an account using the sign up page, it would then send the data to RestDB.io to create the users information
+    * Users can then login to the account again if it matches the database.
+
+* If you submit a booking date for the coaching you will get an email sent to you about your booking confirmation date
+
+* If you send a message in the contact us form it would send the message to the company E-Mail about the enquiry the customer is looking for
+
+* If you subscribed to the newsletter you would get an email about the latest updates on the discounts.
+
+
+
+
+## Technologies used :+1:
+[Adobe XD](https://www.adobe.com/sg/products/xd.html)
+
+[Visual studio code](https://code.visualstudio.com/)
+
+[RestDB](https://restdb.io/)
+
+## Testing :sparkles:
+Automated Testing
+● W3C MarkUp Validation
+https://validator.w3.org/
+● W3C CSS Validation
+https://jigsaw.w3.org/css-validator/
+● W3C Link Checking
+https://validator.w3.org/checklink
+● Color Contrast Accessibility Validation
+https://color.a11y.com/Contrast/
+● Spell Checking
+https://typosaur.us/
+● Alt Text Checking
+https://rushax.com/tools/alt-tag-checker/
+
+
+## Credits
+https://www.google.com/url?sa=i&url=https%3A%2F%2Fstore.epicgames.com%2Fen-US%2Fp%2Fvalorant&psig=AOvVaw3tJMNvGH6RhkCu_AiVYPZx&ust=1676109133547000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOCGnJ3Xiv0CFQAAAAAdAAAAABAE
+
+https://www.google.com/url?sa=i&url=https%3A%2F%2Fdotesports.com%2Fvalorant%2Fnews%2Fvalorant-patch-2-08-full-notes-april-27&psig=AOvVaw3tJMNvGH6RhkCu_AiVYPZx&ust=1676109133547000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOCGnJ3Xiv0CFQAAAAAdAAAAABAJ
+
+
+https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.carousell.sg%2Fp%2Fvalorant-coaching-1122872374%2F&psig=AOvVaw3crBPf0KtL673J89AJ4jJL&ust=1676109194719000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCNCJp7rXiv0CFQAAAAAdAAAAABAE
 
 
 ██╗░░░██╗░█████╗░██╗░░░░░░█████╗░██████╗░░█████╗░███╗░░██╗████████╗
@@ -46,12 +93,3 @@ We would like to create a website that is simple to navigate so that users will 
 ██║░░██╗██║░░██║██╔══██║██║░░██╗██╔══██║██║██║╚████║██║░░╚██╗
 ╚█████╔╝╚█████╔╝██║░░██║╚█████╔╝██║░░██║██║██║░╚███║╚██████╔╝
 ░╚════╝░░╚════╝░╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝╚═╝╚═╝░░╚══╝░╚═════╝░
-
-## Technologies used :+1:
-[Adobe XD](https://www.adobe.com/sg/products/xd.html)
-
-[Visual studio code](https://code.visualstudio.com/)
-
-## Testing :sparkles:
-
-## Credits

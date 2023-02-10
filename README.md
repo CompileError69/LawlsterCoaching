@@ -45,11 +45,13 @@ We would like to create a website that is simple to navigate so that users will 
 
 * If you subscribed to the newsletter you would get an email about the latest updates on the discounts.
 
+* Lottie animation in home page
+
 
 
 
 ## Technologies used :+1:
-[Adobe XD](https://www.adobe.com/sg/products/xd.html)
+[Adobe XD](https://www.adobe.com/sg/products/xd.html) (Link currently do not load to workspace. Please refer to file in folder)
 
 [Visual studio code](https://code.visualstudio.com/)
 

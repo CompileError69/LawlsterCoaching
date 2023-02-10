@@ -20,7 +20,7 @@
             <i class='bx bx-menu' id = "menu-icon"></i>
             <a href ="#" class = "logo"> Lawlster<span class="symbol">&reg;</span></a>
             <ul class = "navbar">
-                <li><a href="#home" class = "active"> Home </a></li>
+                <li><a href="#home"> Home </a></li>
                 <li><a href="#about"> About Us </a></li>
                 <li><a href="#reviews"> Reviews </a></li>
                 <li><a href="#details"> Coach Details  </a></li>
@@ -98,7 +98,7 @@
 
             <span class="fas fa-times" id="close-book-form"  > </span>
         
-            <form id="createBooking" onsubmit="sendEmail(); reset(); return false;">
+            <form id="createBooking" onsubmit="sendBooking(); reset(); return false;">
                 <h3>Booking</h3>
                 <input type="text" id="userName" placeholder="Enter Name" class="box" required>
                 <input type="email" id="bookingEmail" placeholder="Enter Email" class="box" required>
@@ -178,9 +178,9 @@
     <!-- newsletter section starts -->
     <section class="newsletter">
 
-        <form action="">
+        <form onsubmit= "sendNews(); reset(); return false;">
             <h3>Subscribe For Latest Discounts</h3>
-            <input type="email" name="" placeholder="Enter Your Email" id="" class="box">
+            <input type="newsEmail" id = "newsEmail" placeholder="Enter Your Email" id="" class="box">
             <input type="submit" value="Subscribe" class="btns">
         </form>
 
@@ -198,7 +198,7 @@
                 <div class="swiper-slide box">
                     <img src="images/isabel 2.jpg" alt="">
                     <h3>Isabel</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur nihil ipsa placeat. Aperiam at sint, eos ex similique facere hic.</p>
+                    <p>Very kind and patient! Will purchase more and contact him when I need more help :) He went past the allocated hours as well !!</p>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -298,7 +298,7 @@
         <div class="feedback"></div>
         <div class="feedback-desc">
             <p>Will help improve your mechanics (aim/movement/commms)<br>
-                Will improve your rank significantly.
+                <br> Will improve your rank significantly.
                 Can teach you to read the game and transfer it into a team environment.</p>
             <br>
             <i class="far fa-grin-squint-tears"></i><br>
@@ -307,8 +307,8 @@
         <!-- =========================== -->
         <div class="feedback f-img-2"></div>
         <div class="feedback-desc">
-            <p>My in-depth guides help to improve your game mechanics and gamesense (aim, movement, positioning, etc.) Faster RANK UP, Better GAMEPLAY!<br>
-                IGL&Initiator and personal coach on the pro stage. I can be a coach at any rank. Iron to Radiant!</p>
+            <p>My in-depth guides help to improve your game mechanics and gamesense (aim, movement, positioning, etc.)<br>
+                <br> IGL&Initiator and personal coach on the pro stage. I can be a coach at any rank.</p>
             <br>
             <i class="far fa-grin-beam-sweat"></i><br>
             <h4>Joshua</h4>
@@ -352,8 +352,8 @@
 
         <div class="box">
             <h3>Extra Links</h3>
-            <a href="#">Carousel Page</a>
-            <a href="#">TikTok Page</a>
+            <a href="https://www.carousell.sg/u/Lawlster123/">Carousel Page</a>
+            <a href="https://www.tiktok.com/@el_lawlster">TikTok Page</a>
         </div>
 
         <div class="box">
@@ -377,10 +377,10 @@
     <div class = "inner-footer">
         <div class = "social-links">
             <ul>
-                <li class = "social-items"><a href="https://www.facebook.com/bugatti/"><i class = "fab fa-facebook"></i></a></li>
-                <li class = "social-items"><a href="https://www.instagram.com/bugatti/"><i class = "fab fa-instagram"></i></a></li>
-                <li class = "social-items"><a href="https://twitter.com/Bugatti"><i class = "fab fa-twitter"></i></a></li>
-                <li class = "social-items"><a href="https://www.youtube.com/BugattiSocial"><i class = "fab fa-youtube"></i></a></li>
+                <li class = "social-items"><a href="https://www.facebook.com/groups/playvalorant"><i class = "fab fa-facebook"></i></a></li>
+                <li class = "social-items"><a href="https://www.instagram.com/angstychinatea/"><i class = "fab fa-instagram"></i></a></li>
+                <li class = "social-items"><a href="https://twitter.com/PlayVALORANT"><i class = "fab fa-twitter"></i></a></li>
+                <li class = "social-items"><a href="https://www.youtube.com/watch?v=ADSBMb1CdzQ&ab_channel=Woohoojin%7CValorantCoaching"><i class = "fab fa-youtube"></i></a></li>
             </ul>
         </div>
     </div>

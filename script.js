@@ -24,6 +24,7 @@ document.querySelector("#login-btn").onclick = () => {
     menu.classList.remove("active");
   };
 
+  /* Open Booking page */
   document.querySelector('#book-btn').onclick = () =>{
     document.querySelector('.book-form-container').classList.toggle('active');
   }
@@ -186,9 +187,9 @@ $.ajax(settings).done(function (response) {
   console.log(response);
 });
 
-
+/* Contact us send email */
 function sendEmail(){
-  
+   
   Email.send({
     Host : "smtp.elasticemail.com",
     Username : 'vernonkoh123@gmail.com',
@@ -206,23 +207,41 @@ function sendEmail(){
 );
 }
 
-/*
-function sendEmail(){
+
+/* Booking page sending emails */
+function sendBooking(){
   
   Email.send({
     Host : "smtp.elasticemail.com",
     Username : 'vernonkoh123@gmail.com',
     Password : "F3067591595AB4C402CB0B5A3FF33C715A30",
-    To : document.getElementById("email").value,
+    To : document.getElementById("bookingEmail").value,
     From : 'vernonkoh123@gmail.com',
-    Subject :  "New Contact Us Enquiry",
-    Body : "Name: " + document.getElementById("name").value
-        + "<br> Email: " + document.getElementById("email").value
-        + "<br> Message: Thank you for submitting your Enquiries we will get back to you soon"
+    Subject :  "Your Valorant Coaching Date",
+    Body : "Name: " + document.getElementById("userName").value
+        + "<br> Email: " + document.getElementById("bookingEmail").value
+        + "<br> Date of Booking: " + document.getElementById("bookingDate").value
+        + "<br> Message: Thank you for Ordering a Coaching Service From Us! "
         
 }).then(
   message => alert("Message Sent Succesfully")
 );
 }
 
-*/
+/* Newsletter Subscribe send emails */
+function sendNews(){
+  
+  Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : 'vernonkoh123@gmail.com',
+    Password : "F3067591595AB4C402CB0B5A3FF33C715A30",
+    To : document.getElementById("newsEmail").value,
+    From : 'vernonkoh123@gmail.com',
+    Subject :  "Subscription on Updates of discounts",
+    Body : "Email: " + document.getElementById("newsEmail").value
+        + "<br> Message: We will update you on future discount codes for Valorant Coaching Services "
+        
+}).then(
+  message => alert("Message Sent Succesfully")
+);
+}

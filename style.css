@@ -216,6 +216,21 @@ header.shadow{
     padding:2rem 9%;
     box-shadow: var(--box-shadow);
 }
+
+.loginAlert {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ffffff;
+    border: none;
+    border-radius: var(--border-radius);
+    outline: none;
+    cursor: pointer;
+    background: green;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 /* -------------------- END -------------------- */
 
 #menu-btn{
@@ -321,6 +336,11 @@ header.shadow{
 .form__input,
 .form__button {
     font: 500 1rem 'Quicksand', sans-serif;
+}
+
+.form__button[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 .form--hidden {

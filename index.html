@@ -40,14 +40,17 @@
             <h1 class = "form__title"> Login</h1>
             <div class="form__message form__message--error"></div>
             <div class="form__input-group">
-                <input type="text" class="form__input" autofocus placeholder="Username or email">
+                <input type="text" id="user-input" class="form__input" autofocus placeholder="Username or Email">
                 <div class="form__input-error-message"></div>
             </div>
             <div class="form__input-group">
-                <input type="password" class="form__input" autofocus placeholder="Password">
+                <input type="password" id="password-input" class="form__input" autofocus placeholder="Password">
                 <div class="form__input-error-message"></div>
             </div>
-            <button class="form__button" type="submit">Continue</button>
+            <button class="form__button" id="loginSubmit" type="submit">Log In</button>
+            <div class="loginAlert">
+                <p>Successfully logged in</p>
+            </div>
             <p class="form__text">
                 <a href="#" class="form__link">Forgot your password?</a>
             </p>
@@ -64,7 +67,7 @@
                 <div class="form__input-error-message"></div>
             </div>
             <div class="form__input-group">
-                <input type="text" id="signupEmail" class="form__input" autofocus placeholder="Email Address" required>
+                <input type="text" id="signupEmail" class="form__input" autofocus placeholder="Email (Optional)" required>
                 <div class="form__input-error-message"></div>
             </div>
             <div class="form__input-group">
@@ -75,13 +78,14 @@
                 <input type="password" id="signupConfirmPassword" class="form__input" autofocus placeholder="Confirm password">
                 <div class="form__input-error-message"></div>
             </div>
-            <button type="submit" id="signupSubmit" class="form__button">Login</button>
+            <button type="submit" id="signupSubmit" class="form__button">Create Account</button>
+            <div class="loginAlert">
+                <p>Successfully created an account</p>
+            </div>   
             <p class="form__text">
                 <a class="form__link" href="./" id="linkLogin">Already have an account? Sign in</a>
             </p>
         </form>
-        </form>
-
     </div>
 
     <!-- Background image -->
@@ -95,24 +99,33 @@
             </div>
         </div>
         <div class="book-form-container">
-
-            <span class="fas fa-times" id="close-book-form"  > </span>
+            <span class="fas fa-times" id="close-book-form"> </span>
         
             <form id="createBooking" onsubmit="sendEmail(); reset(); return false;">
                 <h3>Booking</h3>
-                <input type="text" id="userName" placeholder="Enter Name" class="box" required>
-                <input type="email" id="bookingEmail" placeholder="Enter Email" class="box" required>
-                <input type="date" id="bookingDate" class="box" required>
-                <textarea id="msgDetails" placeholder="Enter Message" class="box" cols="30" rows="3" required></textarea>
-                <input id="bookingSubmit" type="submit" value="Book Coaching" class="btnss">      
+                
+                <input type="text" id="userName" placeholder="Enter Name" class="box">
+                <div class="form__input-error-message"></div>
+
+                <input type="email" id="bookingEmail" placeholder="Enter Email" class="box">
+                <div class="form__input-error-message"></div>
+
+                <input type="date" id="bookingDate" class="box">
+                <div class="form__input-error-message"></div>
+
+                <textarea id="msgDetails" placeholder="Enter Message" class="box" cols="30" rows="3"></textarea>
+                <div class="form__input-error-message"></div>
+
+                <input id="bookingSubmit" type="submit" value="Book Coaching" class="btnss">
+
+                <div class="loginAlert">
+                    <p>Booking Successful</p>
+                </div>     
             </form>
-        
-        </div>
         </div>
     </section>
 
     <section class="about" id="about">
-
         <h1 class="heading"> <span> About </span> Us </h1>
 
         <div class="row">
@@ -123,11 +136,13 @@
             </div>
 
             <div class="content">
-                <h3>What is Valorant Coaching?</h3>
-                <div class="lottieAnimation">
-                    <lottie-player src="https://assets3.lottiefiles.com/temp/lf20_9gY9Yf.json"
-                    background="transparent" speed="0.5" style="width: 50px; height: 50px;" loop autoplay>
-                    </lottie-player>
+                <div id="headerWithLottie">
+                    <div id="lottieAnimation"></div>
+                        <h3>What is Valorant Coaching</h3>
+                        <lottie-player src="https://assets3.lottiefiles.com/temp/lf20_9gY9Yf.json"
+                        background="transparent" speed="0.75" style="width: 50px; height: 50px;" loop autoplay>
+                        </lottie-player>
+                    </div>
                 </div>
                 <p>Valorant coaching refers to the process of giving the knowledge of a professional Valorant player to another who is willing to take his game to the next level.</p>
                 <p>Commonly, the idea can be associated with an online teacher-student relation, centered on the student's improvement at the game with the exception that online game coaching for Valorant is a much more satisfying practice than the tedious education methods that most of us are used.</p>

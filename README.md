@@ -56,19 +56,19 @@ We would like to create a website that is simple to navigate so that users will 
 [RestDB](https://restdb.io/)
 
 ## Testing :sparkles:
-Automated Testing
-● W3C MarkUp Validation
-https://validator.w3.org/
-● W3C CSS Validation
-https://jigsaw.w3.org/css-validator/
-● W3C Link Checking
-https://validator.w3.org/checklink
-● Color Contrast Accessibility Validation
-https://color.a11y.com/Contrast/
-● Spell Checking
-https://typosaur.us/
-● Alt Text Checking
-https://rushax.com/tools/alt-tag-checker/
+Automated Testing:
+* ● W3C MarkUp Validation
+    * https://validator.w3.org/
+* ● W3C CSS Validation
+    * https://jigsaw.w3.org/css-validator/
+* ● W3C Link Checking
+    * https://validator.w3.org/checklink
+* ● Color Contrast Accessibility Validation
+    * https://color.a11y.com/Contrast/
+* ● Spell Checking
+    * https://typosaur.us/
+* ● Alt Text Checking
+    * https://rushax.com/tools/alt-tag-checker/
 
 
 ## Credits

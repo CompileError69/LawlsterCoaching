@@ -295,7 +295,7 @@ header.shadow{
 
 .login-form-container #close-login-form{
     position: relative;
-    top: -8rem; left: 49rem;
+    top: -9rem; left: 49rem;
     font-size: 1.5rem;
     color: black;
     cursor: pointer;

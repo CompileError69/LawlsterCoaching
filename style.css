@@ -36,7 +36,6 @@
     --border-hover:.1rem solid var(--black);
 }
 
-
 html{
     font-size: 86.5%;
     scroll-behavior: smooth;
@@ -44,10 +43,10 @@ html{
     overflow-x: hidden;
 }
 
-
 section{
     padding:2rem 9%;
 }
+
 img{
 	width: 100%;
 }
@@ -71,9 +70,11 @@ body{
     margin:2rem 0;
     background:rgba(255, 51, 153,.05);
 }
+
 .heading span{
     color:var(--pink);
 }
+
 header{
     display: block;
     width: 100%;
@@ -82,11 +83,13 @@ header{
     left: 0;
     z-index: 100;
 }
+
 header.shadow{
     background: black;
     box-shadow: 2px 4px 4px rgb(15 54 55 /20%);
     transition: 1.5s;
 }
+/* -------------------- END -------------------- */
 
 /* -------------------- Nav bar -------------------- */
 .nav {
@@ -104,16 +107,16 @@ header.shadow{
     display: none;
 }
 
-
-
 .logo{
     font-size: 3.2rem;
     font-weight: 700;
     color: white;
 }
+
 .logo span {
     color: var(--main-color);
 }
+
 .navbar {
     display: flex;
     column-gap: 2rem;
@@ -132,15 +135,16 @@ header.shadow{
     color: var(--main-color);
     border-bottom: 3px solid var(--main-color);
 }
+/* -------------------- END -------------------- */
 
+/* -------------------- Homepage Banner -------------------- */
 .home{
-
     margin: auto;
     width: 100%;
     min-height: 640px;
     display: flex;
     align-items: center;
-    background: url('./images//Valorant-ss-scaled-1.jpg');;
+    background: url('./images//Valorant-ss-scaled-1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center left;
@@ -151,7 +155,7 @@ header.shadow{
     color: var(--bg-color);
 }
 
-.hometext h1{
+.hometext h1 {
     font-size: 3.4rem;
 }
 
@@ -161,7 +165,26 @@ header.shadow{
     margin: 0.5rem 0 1.2rem;
     color: white;
 }
+/* -------------------- END -------------------- */
 
+/* -------------------- Lottie Animation -------------------- */
+#headerWithLottie {
+    display: flex;
+    align-items: center;
+}
+
+#lottieAnimation {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#lottieAnimation h3 {
+    display: inline-block;
+    vertical-align: middle;
+ }
+ /* -------------------- END -------------------- */
+
+/* -------------------- Login button -------------------- */
 .btn:hover{
     background:var(--yellow);
 }
@@ -193,6 +216,7 @@ header.shadow{
     padding:2rem 9%;
     box-shadow: var(--box-shadow);
 }
+/* -------------------- END -------------------- */
 
 #menu-btn{
     font-size: 2.5rem;
@@ -200,6 +224,7 @@ header.shadow{
     display: none;
 }
 
+/* -------------------- Login Form -------------------- */
 .login-form-container{
     position: fixed;
     top: -110%; left:0;
@@ -215,6 +240,7 @@ header.shadow{
 .login-form-container.active{
     top:0;
 }
+
 .login-form-container form{
     margin:2rem;
     text-align: center;
@@ -250,8 +276,6 @@ header.shadow{
     font-size: 85%;
 }
 
-
-
 .login-form-container #close-login-form{
     position: absolute;
     top:10.5rem; right:23rem;
@@ -259,6 +283,7 @@ header.shadow{
     color: black;
     cursor: pointer;
 }
+
 .btnss{
     display: inline-block;
     margin-top: 0px;
@@ -275,9 +300,11 @@ header.shadow{
 .btnss:hover{
     background: var(--color-primary-dark);
 }
+
 .btn:hover{
     background:yellow;
 }
+/* -------------------- END -------------------- */
 
 /* -------------------- The new login -------------------- */
 .logincontainer {
@@ -465,7 +492,9 @@ header.shadow{
     padding-top: 1rem;
     line-height: 1.5;
 }
+/* -------------------- END -------------------- */
 
+/* -------------------- Icons Section -------------------- */
 .icons-container{
     background:#eee;
     display: flex;
@@ -515,6 +544,7 @@ header.shadow{
 .btns:hover{
     background:var(--pink);
 }
+/* -------------------- END -------------------- */
 
 /* -------------------- Subscribe page -------------------- */
 .newsletter{
@@ -547,13 +577,15 @@ header.shadow{
     border-radius: .9rem;
     text-transform: none;
 }
+/* -------------------- END -------------------- */
 
-/* Reviews */
+/* -------------------- Reviews -------------------- */
 .headings{
     text-align: center;
     margin-bottom: 2rem;
     position: relative;
 }
+
 .headings::before{
     content: '';
     position: absolute;
@@ -572,13 +604,12 @@ header.shadow{
     background: #fff;
     border:var(--border);
 }
+
 .reviews .reviews-slider .box{
     border:var(--border);
     padding:2rem;
     text-align: center;
     width: 50rem;
-
-
 }
 
 .reviews .reviews-slider .box:hover{
@@ -613,8 +644,9 @@ header.shadow{
     font-size: 1.7rem;
     color:var(--green);
 }
+/* -------------------- END -------------------- */
 
-
+/* -------------------- About Coaches Section -------------------- */
 .section-3{
     width: 100%;
     height: 80vh;
@@ -622,15 +654,13 @@ header.shadow{
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    
-    
 }
+
 .section-3 h1{
     font-size: 3rem;
     color: #fff;
     text-align: center;
     font-weight: 800;
-
 }
 
 .section-3-wrapper{
@@ -648,6 +678,7 @@ header.shadow{
     background-size: cover;
  
 }
+
 .feedback-desc{
     width: 300px;
     height: 300px;
@@ -658,16 +689,18 @@ header.shadow{
     font-size: 15px;
     
 }
+
 .feedback-desc .far{
     color: #FEC53A;
     font-size: 50px;
-
 }
+
 .f-img-2{
     background: url(./images/joshua.jpg);
     background-position: center;
     background-size: cover;
 }
+/* -------------------- END -------------------- */
 
 /* -------------------- Contact page -------------------- */
 .contact .row{
@@ -723,8 +756,9 @@ header.shadow{
     font-size: 4.5rem;
     color:var(--black);
 }
+/* -------------------- END -------------------- */
 
-/* Booking form container */
+/* -------------------- Booking Form -------------------- */
 #book-btn .btnss{
     margin-top: 0;
 }
@@ -745,12 +779,10 @@ header.shadow{
     justify-content: center;
     background:rgba(255,255,255,.9);
     z-index: 10000;
-
 }
 
 .book-form-container.active{
     top:0;
-
 }
 
 .book-form-container form{
@@ -762,7 +794,6 @@ header.shadow{
     box-shadow: var(--box-shadow);
     border:var(--border);
     background: #fff;
-
 }
 
 .book-form-container form .buttons{
@@ -789,7 +820,6 @@ header.shadow{
     font-size: 85%;
 }
 
-
 .book-form-container #close-book-form{
     position: absolute;
     top:4rem; right:27rem;
@@ -798,14 +828,15 @@ header.shadow{
     cursor: pointer;
 }
 
-
 .book-form-container form h3{
     padding-bottom: 1rem;
     font-size: 2.5rem;
     color:var(--black);
     text-transform: uppercase;
 }
-/* Footer */
+/* -------------------- END -------------------- */
+
+/* -------------------- Footer -------------------- */
 .footer .box-container{
     display: flex;
     flex-wrap: wrap;
@@ -837,9 +868,7 @@ header.shadow{
 .footer .box-container .box  img{
     margin-top: 1rem;
     width: 60%;
-
 }
-
 
 .inner-footer {
     margin: 0;
@@ -858,19 +887,20 @@ header.shadow{
     height: 80px;
     margin: auto;
 }
+
 .social-items{
     list-style:none;
 }
+
 .social-items a{
     padding: 10px 30px;
     font-size: 40px;
     color: white;
-
 }
+
 .social-items a:hover{
     color: red;
 }
-
 
 .outer-footer{
     padding: 15px;
@@ -878,26 +908,23 @@ header.shadow{
     color: white;
     font-size: 18px;
     background-color: #191919;
-
 }
+/* -------------------- END -------------------- */
+
+/* -------------------- Media Queries -------------------- */
 @media (max-width:991px){
-    
     html{
         font-size: 55%;
     }
-
     header{
         padding:2rem;
     }
-
     section{
         padding:2rem;
     }
-
     .home{
         background-position: left;
     }
-
 }
 @media (max-width: 1080px ) {
     .container {
@@ -978,21 +1005,19 @@ header.shadow{
     .section-3{
         text-align: center;
         font-size: 1px;
-
     }
     .section-3-wrapper{
         flex-direction: column;
         font-size: 1px;
     }
 }
+
 @media (max-width:450px){
-    
     html{
         font-size: 50%;
     }
-
     .heading{
         font-size: 3rem;
     }
-
 }
+/* -------------------- END -------------------- */

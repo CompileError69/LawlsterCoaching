@@ -280,7 +280,7 @@ header.shadow{
 
 .login-form-container #close-login-form{
     position: relative;
-    top: -8rem; left: 50rem;
+    top: -8rem; left: 47rem;
     font-size: 1.5rem;
     color: black;
     cursor: pointer;
@@ -1015,12 +1015,12 @@ header.shadow{
 
     .feedback{
         width: 350px;
-        height: 160px;
+        height: 150px;
         margin-top: 10px;
     }
     .feedback-desc{
         width: 350px;
-        height: 150px;
+        height: 140px;
         font-size: 9.5px;
         margin-right: 0px;
         

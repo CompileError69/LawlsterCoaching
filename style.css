@@ -107,6 +107,7 @@ header.shadow{
     display: none;
 }
 
+
 .logo{
     font-size: 3.2rem;
     font-weight: 700;
@@ -189,6 +190,7 @@ header.shadow{
     background:var(--yellow);
 }
 
+/* Login form container */
 #login-btn .btn{
     margin-top: 0;
 }
@@ -292,8 +294,8 @@ header.shadow{
 }
 
 .login-form-container #close-login-form{
-    position: absolute;
-    top:10.5rem; right:23rem;
+    position: relative;
+    top: -8rem; left: 49rem;
     font-size: 1.5rem;
     color: black;
     cursor: pointer;
@@ -321,7 +323,7 @@ header.shadow{
 }
 /* -------------------- END -------------------- */
 
-/* -------------------- The new login -------------------- */
+/* -------------------- Login Pages  -------------------- */
 .logincontainer {
     width: 400px;
     max-width: 400px;
@@ -461,7 +463,7 @@ header.shadow{
     width: 10rem;
 }
 
-/* -------------------- About -------------------- */
+/* -------------------- About Us -------------------- */
 .about .row{
     display: flex;
     align-items: center;
@@ -578,7 +580,7 @@ header.shadow{
     max-width: 35rem;
     margin-left: auto;
     text-align: center;
-    padding:5rem 0;
+    padding:3rem 0;
 }
 
 .newsletter form h3{
@@ -722,7 +724,7 @@ header.shadow{
 }
 /* -------------------- END -------------------- */
 
-/* -------------------- Contact page -------------------- */
+/* -------------------- Contact us page -------------------- */
 .contact .row{
     display: flex;
     flex-wrap: wrap;
@@ -841,8 +843,8 @@ header.shadow{
 }
 
 .book-form-container #close-book-form{
-    position: absolute;
-    top:4rem; right:27rem;
+    position: relative;
+    top: -14rem; left: 40rem;
     font-size: 1.5rem;
     color: black;
     cursor: pointer;
@@ -932,7 +934,7 @@ header.shadow{
 /* -------------------- END -------------------- */
 
 /* -------------------- Media Queries -------------------- */
-@media (max-width:991px){
+@media (max-width:1280px){
     html{
         font-size: 55%;
     }
@@ -968,6 +970,7 @@ header.shadow{
     .home.text h1{
         font-size: 2.1rem;
     }
+
 }
 
 @media (max-width: 968px){
@@ -1007,6 +1010,7 @@ header.shadow{
     .blog-container .box {
         padding: 4px;
     }
+
 }
 
 @media (max-width: 360px) {
@@ -1022,15 +1026,33 @@ header.shadow{
 }
 
 @media (max-width: 968px) {
-    .section-3{
-        text-align: center;
-        font-size: 1px;
-    }
+
+
     .section-3-wrapper{
         flex-direction: column;
-        font-size: 1px;
+
+    }
+
+    .feedback{
+        width: 350px;
+        height: 150px;
+        margin-top: 10px;
+    }
+    .feedback-desc{
+        width: 350px;
+        height: 140px;
+        font-size: 9.5px;
+        margin-right: 0px;
+        
+
+    }
+    .feedback-desc .far{
+
+        font-size: 25px;
     }
 }
+
+
 
 @media (max-width:450px){
     html{
@@ -1039,5 +1061,6 @@ header.shadow{
     .heading{
         font-size: 3rem;
     }
+
 }
 /* -------------------- END -------------------- */

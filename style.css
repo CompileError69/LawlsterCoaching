@@ -278,8 +278,8 @@ header.shadow{
 }
 
 .login-form-container #close-login-form{
-    position: absolute;
-    top:10.5rem; right:23rem;
+    position: relative;
+    top: -8rem; left: 50rem;
     font-size: 1.5rem;
     color: black;
     cursor: pointer;
@@ -822,8 +822,8 @@ header.shadow{
 }
 
 .book-form-container #close-book-form{
-    position: absolute;
-    top:4rem; right:27rem;
+    position: relative;
+    top: -14rem; left: 40rem;
     font-size: 1.5rem;
     color: black;
     cursor: pointer;

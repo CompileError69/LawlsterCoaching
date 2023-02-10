@@ -107,6 +107,7 @@ header.shadow{
     display: none;
 }
 
+
 .logo{
     font-size: 3.2rem;
     font-weight: 700;
@@ -559,7 +560,7 @@ header.shadow{
     max-width: 35rem;
     margin-left: auto;
     text-align: center;
-    padding:2rem 0;
+    padding:3rem 0;
 }
 
 .newsletter form h3{
@@ -913,7 +914,7 @@ header.shadow{
 /* -------------------- END -------------------- */
 
 /* -------------------- Media Queries -------------------- */
-@media (max-width:991px){
+@media (max-width:1280px){
     html{
         font-size: 55%;
     }
@@ -949,6 +950,7 @@ header.shadow{
     .home.text h1{
         font-size: 2.1rem;
     }
+
 }
 
 @media (max-width: 968px){
@@ -988,6 +990,7 @@ header.shadow{
     .blog-container .box {
         padding: 4px;
     }
+
 }
 
 @media (max-width: 360px) {
@@ -1003,15 +1006,33 @@ header.shadow{
 }
 
 @media (max-width: 968px) {
-    .section-3{
-        text-align: center;
-        font-size: 1px;
-    }
+
+
     .section-3-wrapper{
         flex-direction: column;
-        font-size: 1px;
+
+    }
+
+    .feedback{
+        width: 350px;
+        height: 160px;
+        margin-top: 10px;
+    }
+    .feedback-desc{
+        width: 350px;
+        height: 150px;
+        font-size: 9.5px;
+        margin-right: 0px;
+        
+
+    }
+    .feedback-desc .far{
+
+        font-size: 25px;
     }
 }
+
+
 
 @media (max-width:450px){
     html{
@@ -1020,5 +1041,6 @@ header.shadow{
     .heading{
         font-size: 3rem;
     }
+
 }
 /* -------------------- END -------------------- */

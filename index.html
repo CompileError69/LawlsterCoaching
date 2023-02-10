@@ -180,7 +180,7 @@
 
         <form onsubmit= "sendNews(); reset(); return false;">
             <h3>Subscribe For Latest Discounts</h3>
-            <input type="newsEmail" id = "newsEmail" placeholder="Enter Your Email" id="" class="box">
+            <input type="email" id = "newsEmail" placeholder="Enter Your Email" id="" class="box">
             <input type="submit" value="Subscribe" class="btns">
         </form>
 
@@ -297,7 +297,7 @@
     <div class="section-3-wrapper">
         <div class="feedback"></div>
         <div class="feedback-desc">
-            <p>Will help improve your mechanics (aim/movement/commms)<br>
+            <p>Will help improve your mechanics (aim/movement/comms)<br>
                 <br> Will improve your rank significantly.
                 Can teach you to read the game and transfer it into a team environment.</p>
             <br>
@@ -325,10 +325,10 @@
         <iframe class = "map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2820.5017802775665!2d103.85341123658675!3d1.2996884997029594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1936beecf457%3A0xf89eb80633e02ddc!2sReality%20Rift%20Arena%20Bugis%2B!5e0!3m2!1sen!2ssg!4v1675709139123!5m2!1sen!2ssg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <form onsubmit= "sendEmail(); reset(); return false;">
             <h3>Message Us</h3>
-            <input type="text" id= "name" placeholder="Enter Name" class="box">
-            <input type="email" id = "email" placeholder="Enter Email" class="box">
-            <input type="text" id= "subject" placeholder="Enter Subject" class="box">
-            <textarea id="message" placeholder="Enter Message" class="box" cols="30" rows="10"></textarea>
+            <input type="text" id= "name" placeholder="Enter Name" class="box" required>
+            <input type="email" id = "email" placeholder="Enter Email" class="box" required>
+            <input type="text" id= "subject" placeholder="Enter Subject" class="box" required>
+            <textarea id="message" placeholder="Enter Message" class="box" cols="30" rows="10" required></textarea>
             <input type="submit" value="Send Message" class="btn">
         </form>
         

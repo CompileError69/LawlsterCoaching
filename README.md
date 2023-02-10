@@ -57,27 +57,36 @@ We would like to create a website that is simple to navigate so that users will 
 
 ## Testing :sparkles:
 Automated Testing:
-* ● W3C MarkUp Validation
+*  W3C MarkUp Validation
     * https://validator.w3.org/
-* ● W3C CSS Validation
+*  W3C CSS Validation
     * https://jigsaw.w3.org/css-validator/
-* ● W3C Link Checking
+*  W3C Link Checking
     * https://validator.w3.org/checklink
-* ● Color Contrast Accessibility Validation
+*  Color Contrast Accessibility Validation
     * https://color.a11y.com/Contrast/
-* ● Spell Checking
+*  Spell Checking
     * https://typosaur.us/
-* ● Alt Text Checking
+*  Alt Text Checking
     * https://rushax.com/tools/alt-tag-checker/
 
+**We tested the sign up page and booking page and it does send the data to RestDB.io**
+
+**We also tested whether the contact us page sends an email to the company email and it does** 
+
+* Responsiveness tested and edited according to the screen size
 
 ## Credits
-https://www.google.com/url?sa=i&url=https%3A%2F%2Fstore.epicgames.com%2Fen-US%2Fp%2Fvalorant&psig=AOvVaw3tJMNvGH6RhkCu_AiVYPZx&ust=1676109133547000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOCGnJ3Xiv0CFQAAAAAdAAAAABAE
 
-https://www.google.com/url?sa=i&url=https%3A%2F%2Fdotesports.com%2Fvalorant%2Fnews%2Fvalorant-patch-2-08-full-notes-april-27&psig=AOvVaw3tJMNvGH6RhkCu_AiVYPZx&ust=1676109133547000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOCGnJ3Xiv0CFQAAAAAdAAAAABAJ
+* https://www.w3schools.com/
+
+### Media
+* The picture was from (https://media.karousell.com/media/photos/products/2021/10/31/valorant_coaching_1635684898_09cd9d04_progressive.jpg)
 
 
-https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.carousell.sg%2Fp%2Fvalorant-coaching-1122872374%2F&psig=AOvVaw3crBPf0KtL673J89AJ4jJL&ust=1676109194719000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCNCJp7rXiv0CFQAAAAAdAAAAABAE
+
+
+
 
 
 ██╗░░░██╗░█████╗░██╗░░░░░░█████╗░██████╗░░█████╗░███╗░░██╗████████╗
